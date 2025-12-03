@@ -1,5 +1,5 @@
 name: Quick Test
-on: [workflow_dispatch]
+on: [push]
 jobs:
   test:
     runs-on: macos-latest
