@@ -1,0 +1,9 @@
+cat >> .github/workflows/macos-ci.yml << 'EOF'
+
+    - name: Custom Test Step
+      run: |
+        echo "Testing from local terminal"
+        echo "Branch: $(git branch --show-current)"
+        echo "Files in repo:"
+        find . -type f -name "*.md" -o -name "*.py" -o -name "*.js" | head -10
+EOF
